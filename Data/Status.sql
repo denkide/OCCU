@@ -1,0 +1,21 @@
+USE [MVCApp]
+GO
+
+/****** Object:  Table [dbo].[Status]    Script Date: 5/7/2020 8:44:27 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Status](
+	[StatusId] [int] IDENTITY(1,1) NOT NULL,
+	[StatusType] [nvarchar](50) NOT NULL,
+	[Status] [nvarchar](20) NOT NULL,
+ CONSTRAINT [PK_Status] PRIMARY KEY CLUSTERED 
+(
+	[StatusId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+

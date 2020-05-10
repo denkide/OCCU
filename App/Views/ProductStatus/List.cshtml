@@ -1,0 +1,60 @@
+﻿@model PaginatedList<MVCApp.Models.ProductStatus>
+
+@{
+    ViewData["Title"] = "Product Status List";
+}
+
+<div><p><h3>Product Status</h3></p></div>
+
+<p>
+    <a asp-action="Index">Back To Chart</a>
+</p>
+<div style="padding: 5px 1px 10px 1px;">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pharetra felis et neque venenatis varius.
+    Phasellus sapien ligula, iaculis ut mauris posuere, fermentum tincidunt augue. Quisque dapibus consectetur arcu ac
+    bibendum. Aenean egestas leo vel eleifend pretium. Aenean malesuada velit vitae malesuada dignissim. Sed eget nunc
+    rutrum, mollis lacus et, laoreet metus. Donec vitae nulla purus. Vivamus lobortis interdum sodales. In non orci vitae
+    mauris posuere bibendum. Vivamus pulvinar suscipit libero, sed gravida lorem hendrerit quis. Lorem ipsum dolor sit amet,
+    consectetur adipiscing elit.
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Status Type
+            </th>
+            <th>
+                Status
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StatusType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@{
+    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+}
+
+<a asp-action="List"
+   asp-route-pageNum="@(Model.PageIndex - 1)"
+   class="btn btn-default @prevDisabled">
+    Previous
+</a>
+<a asp-action="List"
+   asp-route-pageNum="@(Model.PageIndex + 1)"
+   class="btn btn-default @nextDisabled">
+    Next
+</a>
