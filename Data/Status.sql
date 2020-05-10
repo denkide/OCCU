@@ -1,7 +1,7 @@
 USE [MVCApp]
 GO
 
-/****** Object:  Table [dbo].[Status]    Script Date: 5/7/2020 8:44:27 PM ******/
+/****** Object:  Table [dbo].[Status]    Script Date: 5/10/2020 12:38:03 PM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -18,4 +18,5 @@ CREATE TABLE [dbo].[Status](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
+
 

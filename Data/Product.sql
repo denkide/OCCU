@@ -1,7 +1,7 @@
 USE [MVCApp]
 GO
 
-/****** Object:  Table [dbo].[Product]    Script Date: 5/7/2020 8:43:55 PM ******/
+/****** Object:  Table [dbo].[Product]    Script Date: 5/10/2020 12:37:56 PM ******/
 SET ANSI_NULLS ON
 GO
 
